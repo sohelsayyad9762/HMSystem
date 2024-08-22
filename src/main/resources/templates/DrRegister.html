@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+            margin: 0;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #00796b;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .brand {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            display: block;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #004d40;
+            border-radius: 4px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            border-top: 5px solid #00796b;
+            margin-top: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00796b;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #00796b;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #004d40;
+            box-shadow: 0 0 5px rgba(0, 77, 64, 0.5);
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background-color: #00796b;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .form-group button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+
+ <nav class="navbar">
+        <div class="brand">Suvidha Hospital +</div>
+        <ul>
+            <li><a href="/Register">New Patient Registration</a></li>
+            <li><a href="/View">View Patients</a></li>
+            
+            <li><a href="/WelCome">Go Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>New Doctors Register</h2>
+        <form th:action="@{/drregister}" method="post">
+            <div class="form-group">
+                <label for="Emp_Name">Your Name:</label>
+                <input type="text" id="Emp_Name" name="Emp_Name" required>
+            </div>
+            <div class="form-group">
+                <label for="Mo_NO">Mo. No:</label>
+                <input type="text" id="Mo_NO" name="Mo_NO" required>
+            </div>
+            <div class="form-group">
+                <label for="Specialist">Specialist:</label>
+                <input type="text" id="Specialist" name="Specialist" required>
+            </div>
+            <div class="form-group">
+                <label for="Hopital">Previous Hopital:</label>
+                <input type="text" id="Hopital" name="Hopital" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://t3.ftcdn.net/jpg/04/96/80/34/360_F_496803433_TeCu85tBSH36XkKklQ4Eu6Zc5EbZQgs5.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .navbar .brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 10px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #575757;
+        }
+
+        section {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Added background color with opacity for readability */
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center; /* Center-align the text */
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">Suvidha Hospital +</div>
+        <ul>
+        <li><a href="/About">About</a></li>
+            <li><a href="/Register">New Patient Registration</a></li>
+            <li><a href="/View">View Patients</a></li>
+            <li><a href="/Appointment">Appointment</a></li>
+             <li><a href="/ViewAppointment">View Appointment</a></li>
+        </ul>
+    </nav>
+
+    <section id="welcome">
+        <h2>Welcome To the Suvidha Hospital</h2>
+        <p>Patient Registration Form , All information is mandatory.</p>
+       <h2>  <a href="/Register">New Registration</a> </h2>
+    </section>
+
+    <section id="view">
+        <h2>View</h2>
+        <p>View all the patients.</p>
+       <h2>  <a href="/View">View Patients</a> </h2>
+    </section>
+
+    <section id="appointment">
+        <h2>Appointment</h2>
+        <p>Take your appointments.</p>
+      <h2>  <a href="/Appointment">Appointment</a> </h2>
+    </section>
+    
+    <section id="appointment">
+        <h2> See Appointment</h2>
+        <p>See Your All Appointments.</p>
+       <h2> <a href="/ViewAppointment">View Appointment</a> </h2>
+    </section>
+    
+</body>
+</html>
