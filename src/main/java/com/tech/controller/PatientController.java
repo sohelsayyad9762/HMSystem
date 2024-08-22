@@ -25,6 +25,10 @@ class PatientController {
 	PatientService patientService;
 	
 	
+	 @GetMapping("/")
+	    public String home1() {
+	        return "WelCome";
+	    }
 	
 	
   @GetMapping("/WelCome")
